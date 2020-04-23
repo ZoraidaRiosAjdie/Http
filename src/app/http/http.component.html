@@ -1,0 +1,33 @@
+<select name="peticion" [(ngModel)]='color'>
+	<option [value]='item' *ngFor="let item of lista">{{item}}</option>
+</select>
+{{color}}
+
+<!--<input type="text" [(ngModel)]='color'>
+<div [ngStyle]="{
+	'background':color,
+	'width':'200px',
+	'height':'200px',
+	'float':'right'
+}">
+	
+</div>-->
+<ul *ngIf="color == 'get'">
+	<li *ngFor = "let dato of mostrar()">
+		{{dato.kind}}
+		<ul>
+			<li>{{dato.totalItems}}</li>
+		</ul>
+	</li>
+</ul>
+<div *ngIf="color == 'post'">
+	<input type="text" [(ngModel)]='a'></br>
+	<input type="text" [(ngModel)]='b'></br>
+	<button (click)="actualizar(a,b)">Hacer post</button>
+	<!--<li *ngFor = "let dato of mostrar()">
+		{{dato.kind}}
+		<ul>
+			<li>{{dato.totalItems}}</li>
+		</ul>
+	</li>-->
+</div>
