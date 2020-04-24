@@ -19,7 +19,7 @@ export class HttpComponent implements OnInit {
   }
   mostrar(){
     this._peticionService.get().subscribe(data => {
-      this.datos=[data];
+      this.datos=data;
     });
     return this.datos;
   }

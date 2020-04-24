@@ -10,7 +10,7 @@ export class PeticionService {
 	public peticion : string;
 	public datos : Array <any> = [];
   constructor( private http : HttpClient) {
-  	this.url = "https://www.googleapis.com/books/v1/volumes?q=search+terms"; 
+  	this.url = "https://gist.githubusercontent.com/davidcp22/d1967026b327ce66af7371725cea4c8a/raw/6fc6ca5f1eb5d9f0118b948362bc1d844f424c6b/animales.json"; 
   }
   getURL (){
   	return this.url;

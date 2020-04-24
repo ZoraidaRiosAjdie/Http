@@ -14,20 +14,26 @@
 </div>-->
 <ul *ngIf="color == 'get'">
 	<li *ngFor = "let dato of mostrar()">
-		{{dato.kind}}
-		<ul>
-			<li>{{dato.totalItems}}</li>
-		</ul>
+		{{dato.id}}
+		<!-- <ul>
+			<li>{{dato.id}}</li>
+			<li>{{dato.Tipo}}</li>
+			<li>{{dato.Nombre}}</li>
+			<li>{{dato.Observacion}}</li>
+			<li>{{dato.Ubicacion}}</li>
+			<li>{{dato.Rasgos}}</li>
+			<li>{{dato.Imagen}}</li>
+		</ul> -->
 	</li>
 </ul>
 <div *ngIf="color == 'post'">
-	<input type="text" [(ngModel)]='a'></br>
-	<input type="text" [(ngModel)]='b'></br>
+	<input type="text" [(ngModel)]='a'>
+	<input type="text" [(ngModel)]='b'>
 	<button (click)="actualizar(a,b)">Hacer post</button>
-	<!--<li *ngFor = "let dato of mostrar()">
-		{{dato.kind}}
+	<li *ngFor = "let dato of mostrar()">
+		<!-- {{dato.kind}} -->
 		<ul>
-			<li>{{dato.totalItems}}</li>
+			<!-- <li>{{dato.totalItems}}</li> -->
 		</ul>
-	</li>-->
+	</li>
 </div>
